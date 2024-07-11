@@ -28,6 +28,10 @@ Route::get('/login',[MainController::class,'login']);
     
     Route::get('/institute', [InstituteController::class, 'showInstituteForm'])->name('institute.form');
     Route::post('/institute/store', [InstituteController::class, 'storeInstitute'])->name('institute.store');
+
+    Route::get('/showinstitute', function () {
+    $institute=Institute::all();
+    return view('showinstitutes',compact('institute'));});
     
     Route::get('/faculty', [FacultyController::class, 'showFacultyForm'])->name('faculty.form');
     Route::post('/faculty/store', [FacultyController::class, 'storeFaculty'])->name('faculty.store');
