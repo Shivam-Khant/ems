@@ -5,6 +5,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\InstituteController;
 use App\Http\Controllers\FacultyController;
 use App\Models\Student;
+use App\Models\Institute;
 use App\Http\Controllers\MainController;
 //Route::get('/admin',[MainController::class,'admin']);
 Route::get('/login',[MainController::class,'login']);
